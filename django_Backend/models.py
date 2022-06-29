@@ -1,6 +1,50 @@
-from msilib.schema import Class
+
+from mmap import mmap
 from django.db import models
 
 # Create your models here.
 
-Class
+# class Questions_database(models.Model):
+#     access_code = models.IntegerField(max_length=100)
+#     who_can_initiate = models.CharField(max_length=100)
+#     expiry_date = models.DateField(default="Today")
+#     phone_number = models.IntegerField(max_length=10)
+#     track = models.CharField(max_length=100)
+#     collect_email = models.BooleanField(default= True)
+#     collect_candidate_id = models.BooleanField(default= True)
+#     company = models.CharField(max_length=100)
+#     position = models.CharField(max_length=100)
+#     postion_code = models.IntegerField(max_length=100)
+#     job_title = models.CharField(max_length=100)
+#     report_sent_to_user = models.BooleanField(default= True)
+#     channel_field1 = models.CharField(max_length=100)
+#     channel_field2 = models.CharField(max_length=100)
+#     channel_field3 = models.CharField(max_length=100)
+#     candidate_id = models.IntegerField(max_length=100)
+#     candidate_feedback_message = models.CharField(max_length=100)
+#     voice_match = models.BooleanField(default= True)
+#     hiring_email1 = models.CharField(max_length=100)
+#     hiring_email2 = models.CharField(max_length=100)
+#     interaction_welcome = models.CharField(max_length=100)
+#     interaction_instruction = models.CharField(max_length=100)
+#     interaction_completion_message = models.CharField(max_length=100)
+#     bot_error_message = models.CharField(max_length=100)
+#     collect_resume = models.BooleanField(default= True)
+#     total_question = models.IntegerField(max_length=10)
+#     questions = models.CharField(max_length=1000)
+#     answer_format = models.CharField(max_length=100)
+#     ideal_answers = models.CharField(max_length=1000)
+#     candidate_answers = models.CharField(max_length=1000)
+
+class parent_core_scores_db(models.Model):
+    candidate_id = models.IntegerField(max_length=100)
+    candidate_name = models.CharField(max_length=100)
+    access_id = models.IntegerField(max_length=100)
+    resume_score = models.IntegerField(max_length=100)
+    pace = models.IntegerField(max_length=100)
+    power_words = models.CharField(max_length=100)
+    value_scale = models.IntegerField(max_length=100)
+    pitch_range = models.IntegerField(max_length=100)
+    gesture = models.CharField(max_length=100)
+    overall_sentiment_score = models.IntegerField(max_length=100)
+    overall_content = models.CharField(max_length=100)
